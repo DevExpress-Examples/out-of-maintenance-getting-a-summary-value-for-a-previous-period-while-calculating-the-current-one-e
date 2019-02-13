@@ -14,11 +14,8 @@ Namespace WindowsApplication3
 
 'INSTANT VB NOTE: The variable yearValues was renamed since Visual Basic does not allow variables and other class members to have the same name:
 		Private yearValues_Renamed As List(Of Object)
-		Private quarterValues As List(Of Object)
 
 		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
-			' TODO: This line of code loads data into the 'nwindDataSet.CustomerReports' table. You can move, or remove it, as needed.
-			Me.customerReportsTableAdapter.Fill(Me.nwindDataSet.CustomerReports)
 			Me.customerReportsTableAdapter.Fill(Me.nwindDataSet.CustomerReports)
 			pivotGridControl1.BestFit()
 			pivotGridControl1.BestFitColumnArea()
