@@ -4,13 +4,18 @@
 * [Form1.cs](./CS/WindowsApplication3/Form1.cs) (VB: [Form1.vb](./VB/WindowsApplication3/Form1.vb))
 * [Program.cs](./CS/WindowsApplication3/Program.cs) (VB: [Program.vb](./VB/WindowsApplication3/Program.vb))
 <!-- default file list end -->
-# Getting a summary value for a previous period while calculating the current one
+# How to Display a Percent Difference from the Previous Parallel Period
 
+This example demonstrates how to display the difference between the value for the current year (quarter) and the value for the previous year (the same quarter of the previous year).
 
-<p>Let us assume that we want to calculate the difference between the current and previous periods of time, and you want to allow end users to customize the resulting layout as they wish.</p>
-<p>In this case, you should use the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_CustomCellValuetopic"><u>PivotGridControl.CustomCellValue</u></a> (<a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_CustomCellDisplayTexttopic"><u>PivotGridControl.CustomCellDisplayText</u></a>) event to calculate cell values. To access summary values for the previous period, you should create arrays of current row and column values, find a value that corresponds to the current period, and replace it with the one that corresponds to the previous period and call the <a href="https://documentation.devexpress.com/WPF/DevExpressXpfPivotGridPivotCellBaseEventArgs_GetCellValuetopic.aspx">PivotCellBaseEventArgs.GetCellValue</a> method. You can access all field values via the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridFieldBase_GetUniqueValuestopic"><u>PivotGridFieldBase.GetUniqueValues</u></a> method.</p>
-<p><strong>See Also:</strong><br><a href="https://www.devexpress.com/Support/Center/p/E1110">E1110: How to access other cell value while calculating the current cell</a></p>
+![screenshot](https://github.com/DevExpress-Examples/getting-a-summary-value-for-a-previous-period-while-calculating-the-current-one-e2125/blob/13.1.4%2B/images/screenshot.png)
 
-<br/>
+API in this example:
 
+* [PivotGridControl.CustomCellDisplayText](http://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomCellDisplayText) event
+* [PivotCellDisplayTextEventArgs.GetCellValue](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotCellBaseEventArgs.GetCellValue(System.Object---System.Object---DevExpress.Xpf.PivotGrid.PivotGridField)) method
+* [PivotGridField.GetUniqueValues](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridFieldBase.GetUniqueValues.overloads) method
 
+See also:
+
+* [How to Access a Different Cell's Value While Calculating the Value of the Current Cell](https://github.com/DevExpress-Examples/how-to-access-other-cell-value-while-calculating-the-current-cell-e1110#how-to-access-other-cell-value-while-calculating-the-current-cell)
