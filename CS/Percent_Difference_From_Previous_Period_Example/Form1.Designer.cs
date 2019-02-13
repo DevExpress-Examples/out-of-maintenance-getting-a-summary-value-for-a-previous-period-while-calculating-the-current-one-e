@@ -28,48 +28,94 @@ namespace WindowsApplication3
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo4 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo5 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo6 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo7 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo8 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo9 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo10 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo11 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo12 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
+            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.customerReportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nwindDataSet = new Percent_Difference_From_Previous_Period_Example.nwindDataSet();
+            this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.fieldProductName = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldCompanyName = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSalesPerson = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldOrderDate = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldProductAmount = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldQuantity = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldQuarter = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldPercent = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.customerReportsTableAdapter = new Percent_Difference_From_Previous_Period_Example.nwindDataSetTableAdapters.CustomerReportsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerReportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pivotGridControl1
             // 
             this.pivotGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pivotGridControl1.DataSource = this.customerReportsBindingSource;
+            this.pivotGridControl1.DataSource = this.excelDataSource1;
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
             this.fieldProductName,
-            this.fieldCompanyName,
+            this.fieldSalesPerson,
             this.fieldOrderDate,
-            this.fieldProductAmount,
+            this.fieldQuantity,
             this.fieldQuarter,
             this.fieldPercent});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(685, 404);
+            this.pivotGridControl1.Size = new System.Drawing.Size(693, 404);
             this.pivotGridControl1.TabIndex = 0;
             // 
-            // customerReportsBindingSource
+            // excelDataSource1
             // 
-            this.customerReportsBindingSource.DataMember = "CustomerReports";
-            this.customerReportsBindingSource.DataSource = this.nwindDataSet;
-            // 
-            // nwindDataSet
-            // 
-            this.nwindDataSet.DataSetName = "nwindDataSet";
-            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.excelDataSource1.Name = "excelDataSource1";
+            this.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable");
+            fieldInfo1.Name = "CategoryName";
+            fieldInfo1.Type = typeof(string);
+            fieldInfo2.Name = "Country";
+            fieldInfo2.Type = typeof(string);
+            fieldInfo3.Name = "FirstName";
+            fieldInfo3.Type = typeof(string);
+            fieldInfo4.Name = "LastName";
+            fieldInfo4.Type = typeof(string);
+            fieldInfo5.Name = "ProductName";
+            fieldInfo5.Type = typeof(string);
+            fieldInfo6.Name = "Sales Person";
+            fieldInfo6.Type = typeof(string);
+            fieldInfo7.Name = "OrderDate";
+            fieldInfo7.Type = typeof(System.DateTime);
+            fieldInfo8.Name = "OrderID";
+            fieldInfo8.Type = typeof(double);
+            fieldInfo9.Name = "Quantity";
+            fieldInfo9.Type = typeof(double);
+            fieldInfo10.Name = "Discount";
+            fieldInfo10.Type = typeof(double);
+            fieldInfo11.Name = "Extended Price";
+            fieldInfo11.Type = typeof(double);
+            fieldInfo12.Name = "UnitPrice";
+            fieldInfo12.Type = typeof(double);
+            this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
+            fieldInfo1,
+            fieldInfo2,
+            fieldInfo3,
+            fieldInfo4,
+            fieldInfo5,
+            fieldInfo6,
+            fieldInfo7,
+            fieldInfo8,
+            fieldInfo9,
+            fieldInfo10,
+            fieldInfo11,
+            fieldInfo12});
+            excelWorksheetSettings1.CellRange = null;
+            excelWorksheetSettings1.WorksheetName = "Data";
+            excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
+            this.excelDataSource1.SourceOptions = excelSourceOptions1;
             // 
             // fieldProductName
             // 
@@ -78,13 +124,13 @@ namespace WindowsApplication3
             this.fieldProductName.FieldName = "ProductName";
             this.fieldProductName.Name = "fieldProductName";
             // 
-            // fieldCompanyName
+            // fieldSalesPerson
             // 
-            this.fieldCompanyName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldCompanyName.AreaIndex = 0;
-            this.fieldCompanyName.Caption = "Company Name";
-            this.fieldCompanyName.FieldName = "CompanyName";
-            this.fieldCompanyName.Name = "fieldCompanyName";
+            this.fieldSalesPerson.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldSalesPerson.AreaIndex = 0;
+            this.fieldSalesPerson.Caption = "Sales Person";
+            this.fieldSalesPerson.FieldName = "Sales Person";
+            this.fieldSalesPerson.Name = "fieldSalesPerson";
             // 
             // fieldOrderDate
             // 
@@ -96,14 +142,14 @@ namespace WindowsApplication3
             this.fieldOrderDate.Name = "fieldOrderDate";
             this.fieldOrderDate.UnboundFieldName = "fieldOrderDate";
             // 
-            // fieldProductAmount
+            // fieldQuantity
             // 
-            this.fieldProductAmount.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldProductAmount.AreaIndex = 0;
-            this.fieldProductAmount.Caption = "Product Amount";
-            this.fieldProductAmount.FieldName = "ProductAmount";
-            this.fieldProductAmount.Name = "fieldProductAmount";
-            this.fieldProductAmount.Options.ShowGrandTotal = false;
+            this.fieldQuantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldQuantity.AreaIndex = 0;
+            this.fieldQuantity.Caption = "Quantity";
+            this.fieldQuantity.FieldName = "Quantity";
+            this.fieldQuantity.Name = "fieldQuantity";
+            this.fieldQuantity.Options.ShowGrandTotal = false;
             // 
             // fieldQuarter
             // 
@@ -120,28 +166,22 @@ namespace WindowsApplication3
             this.fieldPercent.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldPercent.AreaIndex = 1;
             this.fieldPercent.Caption = "Diff";
-            this.fieldPercent.FieldName = "ProductAmount";
+            this.fieldPercent.FieldName = "Quantity";
             this.fieldPercent.Name = "fieldPercent";
             this.fieldPercent.Options.ShowGrandTotal = false;
             this.fieldPercent.Options.ShowTotals = false;
             this.fieldPercent.ToolTips.HeaderText = "Percent Difference from Previous Period";
             // 
-            // customerReportsTableAdapter
-            // 
-            this.customerReportsTableAdapter.ClearBeforeFill = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 404);
+            this.ClientSize = new System.Drawing.Size(693, 404);
             this.Controls.Add(this.pivotGridControl1);
             this.Name = "Form1";
             this.Text = "Percent Difference from Previous Period";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerReportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,15 +189,13 @@ namespace WindowsApplication3
         #endregion
 
         private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
-        private System.Windows.Forms.BindingSource customerReportsBindingSource;
         private DevExpress.XtraPivotGrid.PivotGridField fieldProductName;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldCompanyName;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson;
         private DevExpress.XtraPivotGrid.PivotGridField fieldOrderDate;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldProductAmount;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldQuantity;
         private DevExpress.XtraPivotGrid.PivotGridField fieldQuarter;
         private DevExpress.XtraPivotGrid.PivotGridField fieldPercent;
-        private Percent_Difference_From_Previous_Period_Example.nwindDataSet nwindDataSet;
-        private Percent_Difference_From_Previous_Period_Example.nwindDataSetTableAdapters.CustomerReportsTableAdapter customerReportsTableAdapter;
+        private DevExpress.DataAccess.Excel.ExcelDataSource excelDataSource1;
     }
 }
 
