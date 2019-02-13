@@ -14,12 +14,9 @@ namespace WindowsApplication3
         }
 
         List<Object> yearValues;
-        List<Object> quarterValues;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'nwindDataSet.CustomerReports' table. You can move, or remove it, as needed.
-            this.customerReportsTableAdapter.Fill(this.nwindDataSet.CustomerReports);
             this.customerReportsTableAdapter.Fill(this.nwindDataSet.CustomerReports);
             pivotGridControl1.BestFit();
             pivotGridControl1.BestFitColumnArea();
