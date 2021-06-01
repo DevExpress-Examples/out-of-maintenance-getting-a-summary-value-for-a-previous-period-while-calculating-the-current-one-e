@@ -9,7 +9,7 @@ This example demonstrates how to display the difference between the value for th
 
 ![screenshot](https://github.com/DevExpress-Examples/getting-a-summary-value-for-a-previous-period-while-calculating-the-current-one-e2125/blob/18.2.4%2B/images/screenshot.png)
 
-API in this example:
+## API
 
 * [PivotGridControl.CustomCellDisplayText](http://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomCellDisplayText) event
 * [PivotCellDisplayTextEventArgs.GetCellValue](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotCellBaseEventArgs.GetCellValue(System.Object---System.Object---DevExpress.Xpf.PivotGrid.PivotGridField)) method
