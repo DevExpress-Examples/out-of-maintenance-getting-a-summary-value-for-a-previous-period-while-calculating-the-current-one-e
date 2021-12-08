@@ -12,7 +12,7 @@
 
 This example demonstrates how to display the difference between the value for the current year (quarter) and the value for the previous year (the same quarter of the previous year).
 
-![screenshot](https://github.com/DevExpress-Examples/getting-a-summary-value-for-a-previous-period-while-calculating-the-current-one-e2125/blob/18.2.4%2B/images/screenshot.png)
+![screenshot](./images/screenshot.png)
 
 ## API
 
