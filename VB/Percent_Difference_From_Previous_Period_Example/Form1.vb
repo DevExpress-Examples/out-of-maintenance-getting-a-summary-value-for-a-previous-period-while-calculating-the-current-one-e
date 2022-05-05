@@ -51,7 +51,7 @@ Namespace WindowsApplication3
 				If yearValues_Renamed Is Nothing Then
 
 					yearValues_Renamed = New List(Of Object)()
-					For Each val As Object In fieldOrderDate.GetUniqueValues()
+					For Each val As Object In fieldOrderDate1.GetUniqueValues()
 						yearValues_Renamed.Add(val)
 					Next val
 					yearValues_Renamed.Sort()
@@ -63,7 +63,7 @@ Namespace WindowsApplication3
 
 		Private Function UpdateValue(ByVal field As PivotGridField, ByVal index As Integer, ByVal e As PivotCellDisplayTextEventArgs) As Object
 			Dim value As Object = e.GetFieldValue(field, index)
-			If field Is fieldOrderDate Then
+			If field Is fieldOrderDate1 Then
 				Dim currentPosition As Integer = YearValues.IndexOf(value)
 				If currentPosition > 0 Then
 					value = YearValues(currentPosition - 1)

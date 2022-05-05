@@ -54,7 +54,7 @@ namespace WindowsApplication3
                 {
 
                     yearValues = new List<object>();
-                    foreach (Object val in fieldOrderDate.GetUniqueValues())
+                    foreach (Object val in fieldOrderDate1.GetUniqueValues())
                         yearValues.Add(val);
                     yearValues.Sort();
                 }
@@ -66,7 +66,7 @@ namespace WindowsApplication3
         private object UpdateValue(PivotGridField field, int index, PivotCellDisplayTextEventArgs e)
         {
             Object value = e.GetFieldValue(field, index);
-            if (field == fieldOrderDate)
+            if (field == fieldOrderDate1)
             {
                 int currentPosition = YearValues.IndexOf(value);
                 if (currentPosition > 0)
